@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav id="navbar">
-      <div class="logo">Pokemon</div>
+      <div id="logo">Pokemon</div>
       <div class="contact">
         <ul>
           <li><a href="#">List</a></li>
@@ -18,23 +18,43 @@
     </nav>
 
     <div class="hero-section">
-      <div id="img"></div>
-
-      <h1 id="title">Hello to the Pokemon world</h1>
-      <button id="explore"></button>
+      <div id="container">
+        <h1 id="title">Hello to The Pokemon World</h1>
+        <button id="explore">Explore</button>
+      </div>
     </div>
 
-    <div id="pokemon-card">
-      <h3 id="list-title">Pokemon List</h3>
-      <div id="card-container">
-        <div class="card" id="first-card">
-          <h2 id="name">name</h2>
-          <p id="description">description</p>
-          <span>power</span>
-          <span>healthy</span>
-        </div>
-        <button id="more"></button>
+    <div class="wrapper">
+      <div class="container">
+        <input type="radio" name="slide" id="c1" checked />
+        <label for="c1" class="card">
+          <div class="row">
+            <div class="des-container">
+              <h1 id="card-title">Name</h1>
+              <p id="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                laborum earum dignissimos unde? Eius, ipsa.
+              </p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c2" />
+        <label for="c2" class="card">
+          <div class="row"></div>
+        </label>
+        <input type="radio" name="slide" id="c3" />
+        <label for="c3" class="card">
+          <div class="row"></div>
+        </label>
+        <input type="radio" name="slide" id="c4" />
+
+        <label for="c4" class="card">
+          <div class="row">
+            <div class="disc"></div>
+          </div>
+        </label>
       </div>
+      <div class="button"><button id="more">More</button></div>
     </div>
 
     <footer>
