@@ -1,7 +1,3 @@
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: "smooth" });
-}
 const pokemonsContainer = document.querySelector("#contenr");
 async function getPokemonDetails(name) {
   if (!name) {
@@ -44,15 +40,7 @@ async function displayPokemons() {
     return;
   }
 
-  let cardCount = 0;
-
-  for (let i = 0; i < pokemons.length; i++) {
-    const pokemon = pokemons[i];
-
-    if (cardCount >= 4) {
-      break; // Exit the loop if we have created four cards
-    }
-
+  pokemons.forEach(async (pokemon) => {
     const pokemonCard = document.createElement("div");
     const textContainer = document.createElement("div");
     const pokemonImg = document.createElement("img");
@@ -97,9 +85,7 @@ async function displayPokemons() {
     pokemonCard.addEventListener("click", () => {
       window.location.href = `./pokemon-details.html?name=${pokemon.name}`;
     });
-
-    cardCount++;
-  }
+  });
 }
 
 displayPokemons();

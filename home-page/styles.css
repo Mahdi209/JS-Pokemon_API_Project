@@ -118,16 +118,15 @@ button {
 }
 
 /* card style */
-
 #contenr {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-content: center;
-  gap: 30px;
+  align-items: center;
+  height: 600px;
 }
-.cards-media {
+.cards {
   width: 280px;
   height: 490px;
   display: flex;
@@ -139,7 +138,7 @@ button {
   background-color: white;
 }
 img {
-  width: 150px;
+  width: 200px;
   margin-top: 10px;
   height: auto;
   filter: drop-shadow(10px 0px 10px rgba(45, 44, 44, 0.6));
@@ -152,13 +151,15 @@ img {
   text-align: start;
   gap: 20px;
 }
-
+#description {
+  width: 220px;
+}
 .proprty {
   width: 280px;
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(2, 3fr);
   background-color: #e2a625;
-  place-content: end;
+  /* place-content: end; */
 
   border-bottom-left-radius: 22px;
   border-bottom-right-radius: 22px;
@@ -173,18 +174,6 @@ img {
 #speed {
   border-right: 0.4px solid;
   height: 100%;
-}
-#power {
-  border-right: 0.4px solid;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  gap: 40px;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 #more {
