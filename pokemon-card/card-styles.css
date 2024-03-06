@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 100px;
   flex-direction: column;
 }
@@ -45,11 +46,11 @@ a:hover {
 }
 
 #contenr {
-  width: 100%;
+  width: 81%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
   gap: 30px;
 }
 .cards {
@@ -64,7 +65,7 @@ a:hover {
   background-color: white;
 }
 img {
-  width: 150px;
+  width: 200px;
   margin-top: 10px;
   height: auto;
   filter: drop-shadow(10px 0px 10px rgba(45, 44, 44, 0.6));
@@ -77,11 +78,13 @@ img {
   text-align: start;
   gap: 20px;
 }
-
+#description {
+  width: 220px;
+}
 .proprty {
   width: 280px;
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(2, 3fr);
   background-color: #e2a625;
   /* place-content: end; */
 
@@ -99,10 +102,15 @@ img {
   border-right: 0.4px solid;
   height: 100%;
 }
-#power {
-  border-right: 0.4px solid;
+footer {
+  background-color: #e2a625;
+  height: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
 }
-
 @media screen and (max-width: 768px) {
   #navbar {
     justify-content: center;
