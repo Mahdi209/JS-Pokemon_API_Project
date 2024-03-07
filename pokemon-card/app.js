@@ -1,4 +1,6 @@
 const pokemonsContainer = document.querySelector("#contenr");
+var clickSound = document.getElementById("clickSound");
+
 async function getPokemonDetails(name) {
   if (!name) {
     return null;
@@ -61,12 +63,13 @@ async function displayPokemons() {
     pokemonName.textContent = pokemon.name;
     const data = await getPokemonDetails(pokemon.name);
     pokemonImg.src = data.sprites.front_default;
-    pokemonStatus.textContent = "Stats: ";
-    data.stats.forEach((name, index) => {
+    pokemonStatus.textContent = "abilities:  ";
+
+    data.abilities.forEach((ability, index) => {
       if (index == 0) {
-        pokemonStatus.textContent += name.stat.name;
+        pokemonStatus.textContent += ability.ability.name;
       } else {
-        pokemonStatus.textContent += " - " + name.stat.name;
+        pokemonStatus.textContent += " - " + ability.ability.name;
       }
     });
     pokemonHeight.textContent += "H: " + data.height;
@@ -82,8 +85,11 @@ async function displayPokemons() {
     pokemonCard.appendChild(pokemonProprty);
 
     pokemonsContainer.appendChild(pokemonCard);
+    pokemonsContainer.addEventListener("click", () => {
+      clickSound.play();
+    });
     pokemonCard.addEventListener("click", () => {
-      window.location.href = `./pokemon-details.html?name=${pokemon.name}`;
+      window.location.href = `../deatils/pokemon-details.html?name=${pokemon.name}`;
     });
   });
 }

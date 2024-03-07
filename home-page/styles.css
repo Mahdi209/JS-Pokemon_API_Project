@@ -11,6 +11,9 @@ body {
   position: relative;
   background-color: #ffecc4;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #navbar {
@@ -52,7 +55,7 @@ a:hover {
   content: "";
   height: 90vh;
   width: 100%;
-  background-image: url(../img/hero-section2jpg.jpeg);
+  background-image: url(../img/hero-section2.jpeg);
   background-position: center;
   background-size: cover;
   display: flex;

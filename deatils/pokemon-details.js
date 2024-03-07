@@ -1,6 +1,8 @@
-const pokemonContainer = document.getElementById("container");
+const pokemonContainer = document.getElementById("pokemon-details");
 const pokemonTitle = document.getElementById("pokemon-title");
 const pokemonImg = document.getElementById("pokemon-img");
+const pokemonImg2 = document.getElementById("pokemon-img2");
+const pokemonImg3 = document.getElementById("pokemon-img3");
 const pokemonTypesContainer = document.getElementById("pokemon-types");
 const pokemonAbilitiesContainer = document.getElementById("pokemon-abilities");
 const pokemonHeight = document.getElementById("pokemon-height");
@@ -36,9 +38,12 @@ async function displayPokemonDetails() {
     return;
   }
 
-  pokemonTitle.textContent = data.name;
+  pokemonTitle.textContent += " " + data.name;
 
-  pokemonImg.src = data.sprites.front_default;
+  pokemonImg.src = data.sprites.other.home.front_default;
+  pokemonImg2.src = data.sprites.other.showdown.front_default;
+
+  pokemonImg3.src = data.sprites.front_default;
 
   data.types.forEach((type, index) => {
     if (index == 0) {

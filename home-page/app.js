@@ -95,7 +95,7 @@ async function displayPokemons() {
 
     pokemonsContainer.appendChild(pokemonCard);
     pokemonCard.addEventListener("click", () => {
-      window.location.href = `./pokemon-details.html?name=${pokemon.name}`;
+      window.location.href = `../deatils/pokemon-details.html?name=${pokemon.name}`;
     });
 
     cardCount++;
