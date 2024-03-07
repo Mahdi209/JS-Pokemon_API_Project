@@ -1,3 +1,4 @@
+const home = document.getElementById("logo");
 const pokemonsContainer = document.querySelector("#contenr");
 var clickSound = document.getElementById("clickSound");
 
@@ -95,3 +96,6 @@ async function displayPokemons() {
 }
 
 displayPokemons();
+home.addEventListener("click", (event) => {
+  window.location.href = `../home-page/index.html`;
+});

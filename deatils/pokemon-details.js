@@ -1,3 +1,4 @@
+const home = document.getElementById("logo");
 const pokemonContainer = document.getElementById("pokemon-details");
 const pokemonTitle = document.getElementById("pokemon-title");
 const pokemonImg = document.getElementById("pokemon-img");
@@ -67,3 +68,6 @@ async function displayPokemonDetails() {
 }
 
 displayPokemonDetails();
+home.addEventListener("click", (event) => {
+  window.location.href = `../home-page/index.html`;
+});

@@ -1,3 +1,5 @@
+const home = document.getElementById("logo");
+const moreBtn = document.getElementById("more");
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   section.scrollIntoView({ behavior: "smooth" });
@@ -103,3 +105,11 @@ async function displayPokemons() {
 }
 
 displayPokemons();
+
+moreBtn.addEventListener("click", (event) => {
+  window.location.href = `../pokemon-card/pokemon-Card.html`;
+});
+
+home.addEventListener("click", (event) => {
+  window.location.href = `../home-page/index.html`;
+});

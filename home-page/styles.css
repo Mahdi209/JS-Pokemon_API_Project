@@ -7,7 +7,7 @@
 body {
   padding: 0;
   margin: 0;
-  height: 150vh;
+  height: auto;
   position: relative;
   background-color: #ffecc4;
   scroll-behavior: smooth;
@@ -127,7 +127,9 @@ button {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  height: 600px;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 .cards {
   width: 280px;
@@ -196,11 +198,27 @@ img {
 }
 footer {
   background-color: #e2a625;
-  height: 50px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: large;
+}
+#card-but {
+  height: auto;
+  width: auto;
+  align-self: flex-end;
+  margin-right: 5%;
+}
+#more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15%;
+  /* display: grid;
+  position: relative;
+  left: 80%; */
+  background-color: #e2a625;
 }
 @media screen and (max-width: 1366px) {
   #navbar {
@@ -210,6 +228,7 @@ footer {
     margin-left: 5%;
   }
 }
+
 @media screen and (max-width: 1000px) {
   #navbar {
     flex-wrap: wrap;
@@ -262,6 +281,8 @@ footer {
     flex-wrap: wrap;
     align-content: center;
     gap: 30px;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .cards-media {
     width: 280px;
@@ -292,7 +313,7 @@ footer {
   .proprty {
     width: 280px;
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(2, 2fr);
     background-color: #e2a625;
     place-content: end;
 
@@ -310,9 +331,7 @@ footer {
     border-right: 0.4px solid;
     height: 100%;
   }
-  #power {
-    border-right: 0.4px solid;
-  }
+
   .container {
     display: flex;
     flex-direction: column;

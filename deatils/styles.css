@@ -110,3 +110,21 @@ footer {
   justify-content: center;
   font-size: large;
 }
+
+@media screen and (max-width: 1000px) {
+  #pokemon-img3,
+  #pokemon-img {
+    display: none;
+  }
+  .grid-3 {
+    width: 85%;
+
+    /* padding: 0%; */
+  }
+  .grid-2 {
+    padding: 4%;
+  }
+  img {
+    width: 200px;
+  }
+}
