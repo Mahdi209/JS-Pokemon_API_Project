@@ -5,7 +5,10 @@ const elements = {
   searchInput: document.getElementById("searchInput"),
   loadMoreBtn: document.getElementById("loadMore"),
   filterBtns: document.querySelectorAll(".filter-btn"),
-  backToTop: document.getElementById("backToTop")
+  backToTop: document.getElementById("backToTop"),
+  navToggle: document.querySelector(".nav-toggle"),
+  navLinks: document.querySelector(".nav-links"),
+  navLinksItems: document.querySelectorAll(".nav-links a")
 };
 
 // State
@@ -269,6 +272,36 @@ if (elements.backToTop) {
 elements.filterBtns.forEach(btn => {
   btn.addEventListener('click', handleFilterClick);
 });
+
+// Mobile Navigation
+if (elements.navToggle && elements.navLinks) {
+  elements.navToggle.addEventListener('click', () => {
+    const isExpanded = elements.navToggle.getAttribute('aria-expanded') === 'true';
+    elements.navToggle.setAttribute('aria-expanded', !isExpanded);
+    elements.navLinks.classList.toggle('active');
+    document.body.style.overflow = isExpanded ? '' : 'hidden';
+  });
+
+  // Close mobile menu when clicking on a link
+  elements.navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+      elements.navLinks.classList.remove('active');
+      elements.navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (elements.navLinks.classList.contains('active') &&
+        !elements.navLinks.contains(e.target) &&
+        !elements.navToggle.contains(e.target)) {
+      elements.navLinks.classList.remove('active');
+      elements.navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+}
 
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
