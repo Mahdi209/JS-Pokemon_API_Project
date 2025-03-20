@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon World | Pokedex</title>
     <link rel="stylesheet" href="card-styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
     <audio id="clickSound">
@@ -13,19 +14,114 @@
     </audio>
 
     <nav id="navbar">
-      <div id="logo">Pokemon</div>
-      <div class="contact">
-        <ul id="list">
-          <li><a href="../home-page/index.html">Home</a></li>
-          <li><a href="#end">Contact</a></li>
+      <div id="logo">
+        <i class="fas fa-pokeball"></i>
+        <a href="../index.html">
+          <span>Pokemon World</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#filters"><i class="fas fa-filter"></i> Filters</a></li>
+          <li><a href="#end"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <div id="contenr"></div>
+    <div class="page-header">
+      <h1>Pokemon Pokedex</h1>
+      <p>Discover and explore the world of Pokemon</p>
+      <div class="stats-container">
+        <div class="stat-item">
+          <i class="fas fa-database"></i>
+          <span class="stat-count">1000+</span>
+          <span class="stat-label">Pokemon</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <span class="stat-count">18</span>
+          <span class="stat-label">Types</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-bolt"></i>
+          <span class="stat-count">200+</span>
+          <span class="stat-label">Abilities</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="filters" class="filters-section">
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search Pokemon...">
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-type="all">
+            <i class="fas fa-globe"></i> All
+          </button>
+          <button class="filter-btn" data-type="fire">
+            <i class="fas fa-fire"></i> Fire
+          </button>
+          <button class="filter-btn" data-type="water">
+            <i class="fas fa-water"></i> Water
+          </button>
+          <button class="filter-btn" data-type="grass">
+            <i class="fas fa-leaf"></i> Grass
+          </button>
+          <button class="filter-btn" data-type="electric">
+            <i class="fas fa-bolt"></i> Electric
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="pokemon-grid"></div>
+
+    <div class="load-more">
+      <button id="loadMore">
+        <i class="fas fa-plus"></i> Load More Pokemon
+      </button>
+    </div>
+
     <footer id="end">
-      <p>Mohammed Mahdi and Mustafa &copy; 2024</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Pokemon World</h3>
+          <p>Your ultimate Pokemon companion for exploring the vast world of Pokemon. We provide comprehensive information, detailed stats, and an engaging community platform.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#filters">Filters</a></li>
+            <li><a href="#end">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> contact@pokemonworld.com</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-map-marker-alt"></i> Pokemon City, PK 12345</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pokemon World. All rights reserved.</p>
+      </div>
     </footer>
+
+    <div id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="app.js"></script>
   </body>

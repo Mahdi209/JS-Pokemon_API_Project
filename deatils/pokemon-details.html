@@ -3,47 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pokemon World | Pokemon Details</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
-
   <body>
     <nav id="navbar">
-      <div id="logo">Pokemon</div>
-      <div class="contact">
-        <ul id="list">
-          <li><a href="../home-page/index.html">Home</a></li>
-          <li><a href="#end">Contact</a></li>
+      <div id="logo">
+        <i class="fas fa-pokeball"></i>
+        <a href="../index.html">
+          <span>Pokemon World</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="../about-page/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="../contact-page/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </div>
     </nav>
-    <div id="pokemon-details" class="pokemon-card-details">
-      <div class="grid-1">
-        <img src="" id="pokemon-img" />
-        <img src="" id="pokemon-img2" />
 
-        <img src="" id="pokemon-img3" />
+    <header class="page-header">
+      <h1>Pokemon Details</h1>
+      <p>Explore the characteristics and abilities of your favorite Pokemon</p>
+    </header>
+
+    <div class="pokemon-details-container">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
       </div>
-      <div class="grid-2">
-        <h2 id="pokemon-title-de">
-          Pokemon Name: <span id="pokemon-title"></span>
-        </h2>
-        <div id="pokemon-types">
-          <span>Types: </span>
+
+      <div class="error-message" style="display: none;">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>Error loading Pokemon data</span>
+      </div>
+
+      <div class="pokemon-card-details">
+        <div class="pokemon-images">
+          <div class="main-image">
+            <img id="pokemon-img" src="" alt="Pokemon" />
+          </div>
+          <div class="secondary-images">
+            <img id="pokemon-img2" src="" alt="Pokemon Front" />
+            <img id="pokemon-img3" src="" alt="Pokemon Back" />
+          </div>
         </div>
 
-        <div id="pokemon-abilities">
-          <span>Abilities: </span>
+        <div class="pokemon-info">
+          <div class="info-section">
+            <h2 id="pokemon-title-de"></h2>
+            <h1 id="pokemon-title"></h1>
+          </div>
+
+          <div class="info-section">
+            <span class="section-label">Types</span>
+            <div id="pokemon-types" class="badges"></div>
+          </div>
+
+          <div class="info-section">
+            <span class="section-label">Abilities</span>
+            <div id="pokemon-abilities" class="badges"></div>
+          </div>
+
+          <div class="info-section">
+            <span class="section-label">Base Stats</span>
+            <div id="stats-section" class="stats-section"></div>
+          </div>
         </div>
-      </div>
-      <div class="grid-3">
-        <p id="pokemon-height">Height:</p>
-        <p id="pokemon-weight">Weight:</p>
       </div>
     </div>
-    <footer id="end">
-      <p>Mohammed Mahdi and Mustafa &copy; 2024</p>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Pokemon World is your ultimate destination for exploring the fascinating world of Pokemon. Discover detailed information about your favorite Pokemon, their abilities, and more.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../home-page/index.html">Home</a></li>
+            <li><a href="../about-page/about.html">About</a></li>
+            <li><a href="../contact-page/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@pokemonworld.com</li>
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-map-marker-alt"></i> Pokemon City, PK 12345</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pokemon World. All rights reserved.</p>
+      </div>
     </footer>
+
     <script src="./pokemon-details.js"></script>
   </body>
 </html>
